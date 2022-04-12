@@ -1,14 +1,14 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
- name: static-ingress
+ name: contact-ingress
  namespace: contact
 spec:
  rules:
- - host: static.joshna.xyz
+ - host: 
    http:
      paths:
-     - path:
+     - path:/contact-svc.about.svc.cluster.local
        backend:
-         serviceName: static-svc
+         serviceName: contact-svc
          servicePort: 80
