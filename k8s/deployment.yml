@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: static-application
+  namespace: contact
+spec:
+  selector:
+    matchLabels:
+      app: static-application
+  replicas: 2 # tells deployment to run 2 pods matching the template
+  template:
+    metadata:
+      labels:
+        app: static-application
+    spec:
+      containers:
+      - name: static
+        image:  
+        ports:
+        - containerPort: 80
