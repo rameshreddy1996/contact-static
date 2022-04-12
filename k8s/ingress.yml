@@ -5,7 +5,7 @@ metadata:
  namespace: contact
 spec:
  rules:
- - host: 
+ - host: static.joshna.xyz
    http:
      paths:
      - path:/contact-svc.about.svc.cluster.local
